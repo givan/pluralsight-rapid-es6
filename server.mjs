@@ -23,5 +23,6 @@ import * as values from './module1-default';
 console.log(values);
 
 import './module5';
+import './module6';
 
 console.log('ending in server.mjs...');

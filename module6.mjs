@@ -34,7 +34,7 @@ class IdGenerator {
     this._end = end;
   }
 
-  * [Symbol.iterator]() {
+  *[Symbol.iterator]() {
     for (let i = this._start; i < this._end; i++) {
       let result = yield i;
       if (result) {
@@ -60,7 +60,7 @@ for (let count of generator) {
 let gen2 = new IdGenerator(0, 15);
 let itGen2 = gen2[Symbol.iterator]();
 let result = itGen2.next();
-while(!result.done) {
+while (!result.done) {
   console.log(`itGen2.value=${result.value}`);
   result = itGen2.next(result.value === 7); // stopping the generator at 7 even though it can go up to 15
 }
@@ -68,7 +68,7 @@ while(!result.done) {
 let gen3 = new IdGenerator(0, 15);
 let itGen3 = gen3[Symbol.iterator]();
 result = itGen3.next();
-while(!result.done) {
+while (!result.done) {
   console.log(`itGen3.value=${result.value}`);
   if (result.value === 7) {
     result = itGen3.return(77); // stopping the generator at 7 even though it can go up to 15; and we return 77 value

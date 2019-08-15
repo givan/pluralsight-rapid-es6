@@ -25,5 +25,6 @@ console.log(values);
 import './module5';
 import './module6';
 import './module6-promise';
+import './module7';
 
 console.log('ending in server.mjs...');

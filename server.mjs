@@ -3,6 +3,8 @@ console.log('starting in server.mjs...');
 // Here we use node's --experimental-modules feature. You can also use transpiler like Babel or Traceur - 
 // Read this article: https://appdividend.com/2019/03/13/es6-modules-in-node-tutorial-with-example/
 
+// ES6 compat matrix - super useful link!!!: https://kangax.github.io/compat-table/es6/
+
 import { sqrt, square } from './app';
 const a = sqrt(4);
 const b = square(2);
@@ -27,5 +29,6 @@ import './module6';
 import './module6-promise';
 import './module7';
 import './module8';
+import './module9';
 
 console.log('ending in server.mjs...');

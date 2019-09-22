@@ -141,3 +141,23 @@ console.log(b instanceof Perks); // true
 
 a = Perks.from([1, 2, 3]);
 console.log(a.sum()); // 6
+
+class Artist {
+  constructor(name, address) {
+    this._name = name;
+    this._address = address;
+  }
+
+  get name () {
+    return this._name;
+  }
+
+  set name(value) {
+    this._name = value;
+  }
+}
+
+const leonardo = new Artist("Leonardo", "Los Angeles");
+console.log(`Property setter: ${leonardo.name}`);
+leonardo.name = "Vuna";
+console.log(`Property setter: ${leonardo.name}`);
